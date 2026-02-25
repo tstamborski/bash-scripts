@@ -1,8 +1,10 @@
 # ![](https://github.com/tstamborski/pixelart-icons/blob/main/png/cmd32.png) Bash Scripts
 
-Collection of my personal bash scripts. The scripts are mostly undocumented - i keep them here mainly for backup reason.
+Collection of my personal bash scripts. The scripts are *mostly* undocumented - i keep them here mainly for backup reason.
 
 ## Short Descriptions
+
+*Here I put some descritions for some of my scripts - if time lets, i try to make them usable for others but it isn't always easy.*
 
 ``` for-each.sh command directory ```  
 Executes a command for every not-hidden file or subdirectory in the specified directory.
