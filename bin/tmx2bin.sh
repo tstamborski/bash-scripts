@@ -10,10 +10,13 @@ height=`xmlstarlet sel -t -v "/map/@height" $1`
 data=`xmlstarlet sel -t -v "/map/layer/data" $1 | cut -f 1- -d "," --output-delimiter " "`
 counter=0
 
-printf "%c%c" $(( $width % 256 )) $(( $width / 256 )) > $2
-printf "%c%c" $(( $height % 256 )) $(( $height / 256 )) >> $2
+printf "\x$(printf %x $(( $width % 256 )))" > $2
+printf "\x$(printf %x $(( $width / 256 )))" >> $2
+printf "\x$(printf %x $(( $height % 256 )))" >> $2
+printf "\x$(printf %x $(( $height / 256 )))" >> $2
+
 for id in $data; do
-	printf "%c" $id >> $2
+	printf "\x$(printf %x $id)" >> $2
 	counter=$(( $counter + 1 ))
 done
 
