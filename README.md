@@ -20,3 +20,8 @@ Adds the specified extension to the given file - it checks and do nothing if the
 
 ``` hello.sh ```  
 Silly script which prints "Hello" + current user name from uppercase letter.
+
+``` tmx2bin.sh tmx_file output_file ```  
+My script for extracting data from Tiled tmx files into plain binary format (good for use in the retro games development).
+Format of the output file is 16 bits of map width, 16 bits of map height and next come tiles IDs stored as one byte values.
+Map width and height are little-endian.
