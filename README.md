@@ -4,7 +4,10 @@ Collection of my personal bash scripts. The scripts are *mostly* undocumented - 
 
 ## Short Descriptions
 
-*Here I put some descritions for some of my scripts.*
+*Here I put some descritions of some scripts.*
+
+``` toughluck.sh year ```  
+Prints out all fridays 13th in the given year.
 
 ``` for-each.sh command directory ```  
 Executes a command for every not-hidden file or subdirectory in the specified directory.
@@ -23,5 +26,5 @@ Silly script which prints "Hello" + current user name from uppercase letter.
 
 ``` tmx2bin.sh tmx_file output_file ```  
 My script for extracting data from Tiled tmx files into plain binary format (good for use in the retro games development).
-Format of the output file is 16 bits of map width, 16 bits of map height and next come tiles IDs stored as one byte values.
-Map width and height are little-endian.
+Format of the output file is 16 bits of map width, 16 bits of map height and next come tiles IDs stored as two byte values.
+All values are encoded as little-endian.

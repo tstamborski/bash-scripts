@@ -16,10 +16,11 @@ printf "\x$(printf %x $(( $height % 256 )))" >> $2
 printf "\x$(printf %x $(( $height / 256 )))" >> $2
 
 for id in $data; do
-	printf "\x$(printf %x $id)" >> $2
+	printf "\x$(printf %x $(( $id % 256 )))" >> $2
+	printf "\x$(printf %x $(( $id / 256 )))" >> $2
 	counter=$(( $counter + 1 ))
 done
 
-printf "%i bytes of the %ix%i map written. Done.\n" $counter $width $height
+printf "%i words of the %ix%i map written. Done.\n" $counter $width $height
 exit 0
 
